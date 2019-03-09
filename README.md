@@ -1,4 +1,5 @@
 # StarWarsAPI
+A stars Wars app using the Vue.js Framework
 
 ## Project setup
 ```
