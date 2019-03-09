@@ -1,5 +1,6 @@
 # StarWarsAPI
-A stars Wars app using the Vue.js Framework
+A Stars Wars app using the Vue.js Framework. This will list the Films, People, Planets, Species, StarShips, Vehicles information that will be taken from the StarWars API. The information will be styled as and when needed to display the 
+data in a nice clean and fun way.
 
 ## Project setup
 ```
