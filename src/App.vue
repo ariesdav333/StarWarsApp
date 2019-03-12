@@ -95,7 +95,10 @@ export default {
 }
 .starwars-header{
   position: relative;
-  top: 70px;
+  top: 40px;
   z-index: 0;
+  height: 150px;
+  width: 100%;
+
 }
 </style>
