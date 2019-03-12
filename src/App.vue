@@ -4,6 +4,7 @@
       <div class="container">
         <div class="nav-left">
           <a class=""> <b>Star Wars</b> </a>
+
         </div>
           <span class="nav-toggle">  <!-- for mobile devices -->
         <span></span>
@@ -31,22 +32,13 @@
       </div>
     </div>
 
-
-    <!--<h1 class="header"> Star Wars </h1> -->
-<!--
-    <h2 class="header-h2"> Below are a list of Planets with some information about them </h2>
-    <div class="container-fluid">
-      <div class="columns"> 
-      <div v-for="(planet, index) in planets" :key="index">
-       
-        <div class="column">
-        <b>Name:</b>{{planet.name}}
-        <p><b>Rotation:</b>{{planet.rotation_period}}</p>
-        <p><b>Usual Climate:</b> {{planet.climate}}</p>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <img class="starwars-header" src="./assets/Star_Wars_logo-1.png"> 
         </div>
       </div>
-      </div>
-    </div> -->
+    </section>
      <planets></planets>
    
     
@@ -67,23 +59,6 @@ export default {
   }
 
 
-// //  data(){
-//   //  return{
-//     //  planets: [],
-//    // }
-//  // },
-//   //methods: {
-//     loadPlanets() {
-//       this.planets = [];
-//       let url = "planets";
-//       this.$http.get(url).then(response => {
-//         this.planets = response.data.results;
-//       });
-//     },  
-//   },
-//   created() {
-//     this.loadPlanets(); // get data once instance loads
-//   }
 }
 
 </script>
@@ -118,5 +93,9 @@ export default {
   display: inline;
   padding-right: 10px;
 }
-
+.starwars-header{
+  position: relative;
+  top: 70px;
+  z-index: 0;
+}
 </style>
