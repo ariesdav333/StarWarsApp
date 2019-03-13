@@ -1,6 +1,9 @@
 <template>
     <div>
-            <h1>StarShips Page</h1>
+        <div class="container-fluid">
+            <h1><b>StarShips Page</b></h1>
+        <section class="header-3"> This displays all the starships in Star Wars </section>
+        </div>
     </div>
 </template>
 
@@ -11,5 +14,8 @@ export default {
 </script>
 
 <style>
-
+.container-fluid{
+  padding: 20px;
+  margin: 10px;
+}
 </style>
