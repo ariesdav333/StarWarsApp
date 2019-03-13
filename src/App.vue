@@ -13,12 +13,12 @@
       </span>
 
       <div class="nav-right nav-menu"> <!-- Create the router links here -->
-      <router-link to="planets" class="nav-item">Planets</router-link>
-      <router-link to="films" class="nav-item r-item">Films</router-link>
-      <router-link to="people" class="nav-item r-item">People</router-link>
-       <router-link to="species" class="nav-item r-item">Species</router-link>
-        <router-link to="starships" class="nav-item r-item">StarShips</router-link>
-         <router-link to="vehicles" class="nav-item r-item">Vehicles</router-link>
+      <router-link to="Planets" class="nav-item">Planets</router-link>
+      <router-link to="Films" class="nav-item r-item">Films</router-link>
+      <router-link to="/People" class="nav-item r-item">People</router-link>
+       <router-link to="/Species" class="nav-item r-item">Species</router-link>
+        <router-link to="/Starships" class="nav-item r-item">StarShips</router-link>
+         <router-link to="/Vehicles" class="nav-item r-item">Vehicles</router-link>
 
       <div class="nav-item"> 
         <p class="control">
@@ -39,26 +39,15 @@
         </div>
       </div>
     </section>
-     <planets></planets>
-   
-    
-    <router-view/>
+       <router-view/>
   </div>
 </template>
 
+
 <script>
-
-import Planets from '@/components/Planets'
-
-
-
 export default {
   components:{
-    Planets,
-   
   }
-
-
 }
 
 </script>

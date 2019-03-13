@@ -1,12 +1,12 @@
 <template>
-    <div class="films">
-        <h1>Welcome to the Films section</h1>
+    <div>
+        <h1><b>Species Page</b></h1>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'films',
+    
 }
 </script>
 

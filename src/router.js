@@ -1,23 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Planets from '@/components/Planets'
-import Films from '@/components/Films'
-import People from '@/components/People'
-import Species from '@/components/Species'
-import StarShips from '@/components/StarShips'
-import Vehicles from '@/components/Vehicles'
+import Planets from './views/Planets'
+import Films from './views/Films'
+import People from './views/People'
+import Species from './views/Species'
+import StarShips from './views/StarShips'
+import Vehicles from './views/Vehicles'
 
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: 'Planets', name: 'planets', component: Planets},
-    { path: 'Films', name: 'films', component: Films},
-    { path: 'People', name: 'people', component: People},
-    { path: 'Species', name: 'species', component: Species},
-    { path: 'StarShips', name: 'starships', component: StarShips},
-    { path: 'Vehicles', name: 'vehicles', component: Vehicles},
+    { path: '/planets', name: 'planets', component: Planets},
+    { path: '/films', name: 'films', component: Films},
+    { path: '/people', name: 'people', component: People},
+    { path: '/species', name: 'species', component: Species},
+    { path: '/starships', name: 'starships', component: StarShips},
+    { path: '/vehicles', name: 'vehicles', component: Vehicles},
    
   ]
 })
