@@ -5,8 +5,10 @@
         <div class="container-fluid">
         <div class="columns">
             <div v-for="(film, index) in films" :key="index" ></div>
-            <pre>{{films}}</pre> 
+            <!--<pre>{{films}}</pre> -->
             <div class="column">
+                <div> <b>Title:</b>{{films.director}}</div>
+               
             </div>
         </div>
         </div>
