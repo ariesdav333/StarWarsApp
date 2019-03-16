@@ -4,8 +4,9 @@
     <h1><b>People Page</b></h1>
         <div class="container-fluid">
             <div class="columns">
-                                <div v-for="(people, index) in peoples" :key="index"> 
-                <div class="column">  
+                <div v-for="(people, index) in peoples" :key="index"> 
+                <div class="column is-one-fifth"> 
+                    <div class="column">
                     <p><b>Name: </b>{{people.name}}</p>
                     <p><b>Height: </b>{{people.height}}</p>
                     <p><b>Weight: </b>{{people.mass}}</p>
@@ -19,7 +20,7 @@
             </div>
         </div>
         </div>
-       
+       </div>
     </div>
 </template>
 

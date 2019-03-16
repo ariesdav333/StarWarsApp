@@ -6,17 +6,18 @@
       <div class="columns"> 
       <div v-for="(planet, index) in planets" :key="index">
        <!-- <pre>{{planets}}</pre> -->
-        <div class="column">
-        <b>Name:</b>{{planet.name}}
-        <p><b>Rotation:</b>{{planet.rotation_period}}</p>
+        <div class="column is-one-fifth">
+            <div class="column">
+        <b>Name: </b>{{planet.name}}
+        <p><b>Rotation: </b>{{planet.rotation_period}}</p>
         <p><b>Diameter of Planet: </b>{{planet.diameter}}</p>
         <p><b>Usual Climate:</b> {{planet.climate}}</p>
         <p><b>Created on: </b>{{planet.created}}</p>
         </div>
+        </div>
       </div>
       </div>
     </div>
-
     </div>
 </template>
 
