@@ -2,6 +2,7 @@
     <div>
             
     <h2 class="header-h2"> Below are a list of Planets with some information about them </h2>
+
     <div class="container-fluid">
       <div class="columns"> 
       <div v-for="(planet, index) in planets" :key="index">
@@ -13,6 +14,12 @@
         <p><b>Diameter of Planet: </b>{{planet.diameter}}</p>
         <p><b>Usual Climate:</b> {{planet.climate}}</p>
         <p><b>Created on: </b>{{planet.created}}</p>
+      <button class="button is-black" @click="isComponentModalActive = true">Info</button> 
+
+        <modal v-if="isComponentModalActive" :active.sync="isComponentModalActive" has-modal-card>
+        </modal>
+ 
+        
         </div>
         </div>
       </div>
@@ -22,12 +29,22 @@
 </template>
 
 <script>
+import Modal from '@/components/Modal'
+
 export default {
+
+    components: {
+        Modal,
+    },
     data() {
         return{
             planets: [],
+            isComponentModalActive: false,
+        
+            
         }
     },
+    
     methods: {
         loadPlanets() {
       this.planets = [];

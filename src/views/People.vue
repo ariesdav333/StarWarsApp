@@ -16,6 +16,7 @@
                             <p><b>DOB: </b>{{people.brith_year}}</p>
                               <p><b>Gender: </b>{{people.gender}}</p>
                                 <p><b>Eye Colour: </b>{{people.mass}}</p> 
+                                <a class="button is-black">Info</a> 
                 </div>
             </div>
         </div>

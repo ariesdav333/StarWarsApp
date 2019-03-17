@@ -4,7 +4,7 @@
                  <h1><b>Species Page</b></h1>
         <section class="header-3"> This displays all the species that are represnted in the starwars trilogy</section>
         <div>
-            
+           
         </div>
 
         </div>
@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import Modal from '@/components/Modal'
+
 
 export default {
     components: {
-        Modal
+     
     },
     
 }
