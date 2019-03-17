@@ -2,6 +2,8 @@
     <div>
    
     <h1><b>People Page</b></h1>
+
+    <modal v-if="showModal" @close="showModal = false"></modal>
         <div class="container-fluid">
             <div class="columns">
                 <div v-for="(people, index) in peoples" :key="index"> 
@@ -16,7 +18,7 @@
                             <p><b>DOB: </b>{{people.brith_year}}</p>
                               <p><b>Gender: </b>{{people.gender}}</p>
                                 <p><b>Eye Colour: </b>{{people.mass}}</p> 
-                                <a class="button is-black">Info</a> 
+                                <button class="button is-black" @click="showModal = true">Info</button> 
                 </div>
             </div>
         </div>
@@ -26,10 +28,16 @@
 </template>
 
 <script>
+import Modal from '@/components/Modal'
+
 export default {
+    components: {
+        Modal,
+    },
     data() {
         return{
             peoples: [],
+            showModal: false,
         }
     },
     methods: {
