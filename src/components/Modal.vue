@@ -1,32 +1,42 @@
 <template>
-    <div class="my-modal">
-        <div class="modal-background">
-            <div class="modal-card">
-                <header class="modal-card-head">
-                <p class="modal-card-title">Information</p>
-                <button class="delete" label="close"></button>
-                </header>
-                <section class="modal-card-body">  
-                    Information coming from API Request goes here        
-                </section>
-                <footer class="modal-card-foot">
-                    <button class="button">Cancel</button>
-                </footer>
-            </div>
-        </div>
-    </div>
+    <div>
+        <div class="modal is-active" @close="$emit('close')">
+  <div class="modal-background"></div>
+        <p class="modal-card-title">Modal</p>
+  <div class="modal-content">
+      <div class="box"> 
+          Test text
+      </div> 
+     <button class="delete" aria-label="close" @click="$emit('close')"></button>
+  </div>
+  <section class="modal-card-body">
+     information where the api request will go
+  </section>
+  <footer class="modal-card-foot">
+      <button class="modal-close is-large" @click="$emit('close')">Close</button>
+  </footer>
+  </div>
+</div>
+    
 </template>
+
+
 
 <script>
 export default {
     data() {
         return{
-           isComponentModalActive: false,
+          
         }
     }  
 }
 </script>
 
+
 <style>
+.box{
+    height: 600px;
+    width: 600px;
+}
 
 </style>
