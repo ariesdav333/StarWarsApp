@@ -6,11 +6,6 @@
     <modal v-if="showModal" :title="planet" @close="showModal = false">
        <div v-for="(planet, index) in planets" :key="index">
         <b>Name: </b>{{planet.name}}
-        <p><b>Rotation: </b>{{planet.rotation_period}}</p>
-        <p><b>Diameter of Planet: </b>{{planet.diameter}}</p>
-        <p><b>Usual Climate:</b> {{planet.climate}}</p>
-        <p><b>Created on: </b>{{planet.created}}</p>
-      <button class="button is-black" @click="showModal = true">Info</button> 
       </div>
     </modal>
 
