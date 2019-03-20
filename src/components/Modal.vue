@@ -1,8 +1,10 @@
 <template>
     <div>
         <div class="modal is-active" @close="$emit('close')">
-  <div class="modal-card"></div>
-        <p class="modal-card-title"></p>
+  <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Star Wars Data</p>
+        </header>
   <div class="modal-content">
   <section class="modal-card-body"> 
       <slot></slot>
@@ -12,6 +14,7 @@
      <footer class="modal-card-foot">
       <button class="modal-close is-large" @click="$emit('close')">Close</button>
   </footer>
+  </div>
   </div>
 
   </div>
