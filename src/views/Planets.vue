@@ -3,14 +3,22 @@
             
     <h2 class="header-h2"> Below are a list of Planets with some information about them </h2>
 
+    <modal v-if="showModal" :title="planet" @close="showModal = false">
+       <div v-for="(planet, index) in planets" :key="index">
+        <b>Name: </b>{{planet.name}}
+        <p><b>Rotation: </b>{{planet.rotation_period}}</p>
+        <p><b>Diameter of Planet: </b>{{planet.diameter}}</p>
+        <p><b>Usual Climate:</b> {{planet.climate}}</p>
+        <p><b>Created on: </b>{{planet.created}}</p>
+      <button class="button is-black" @click="showModal = true">Info</button> 
+      </div>
+    </modal>
 
-    <modal v-if="showModal" @close="showModal = false"></modal>
-
-    <!--<button @click="showModal=true">Show Modal</button>-->
-
+    
 
     <div class="container-fluid">
       <div class="columns"> 
+         
       <div v-for="(planet, index) in planets" :key="index">
        <!-- <pre>{{planets}}</pre> -->
         <div class="column is-one-fifth">
@@ -20,11 +28,7 @@
         <p><b>Diameter of Planet: </b>{{planet.diameter}}</p>
         <p><b>Usual Climate:</b> {{planet.climate}}</p>
         <p><b>Created on: </b>{{planet.created}}</p>
-
       <button class="button is-black" @click="showModal = true">Info</button> 
-
- 
-       
         </div>
         </div>
       </div>
@@ -45,7 +49,6 @@ export default {
         return{
             planets: [],
             showModal: false,
-          
         }
     },
     
@@ -58,10 +61,10 @@ export default {
       });
     }, 
     },
+
     created() {
         this.loadPlanets();
     }
-    
 }
 </script>
 
