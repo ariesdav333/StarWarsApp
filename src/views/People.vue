@@ -18,7 +18,8 @@
                             <p><b>DOB: </b>{{people.brith_year}}</p>
                               <p><b>Gender: </b>{{people.gender}}</p>
                                 <p><b>Eye Colour: </b>{{people.mass}}</p> 
-                                <button class="button is-black" @click="showModal = true">Info</button> 
+                                <v-button :onClick="peopleClick">People Info</v-button>
+                                
                 </div>
             </div>
         </div>
@@ -29,10 +30,12 @@
 
 <script>
 import Modal from '@/components/Modal'
+import Button from '@/components/Button'
 
 export default {
     components: {
         Modal,
+        'v-button':Button,
     },
     data() {
         return{
@@ -41,6 +44,9 @@ export default {
         }
     },
     methods: {
+        peopleClick() {
+            console.log('People Clicked')
+        },
         loadPeople() {
             this.peoples = [];
             let url = "people";
