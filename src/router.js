@@ -7,7 +7,6 @@ import Species from './views/Species'
 import StarShips from './views/StarShips'
 import Vehicles from './views/Vehicles'
 
-
 Vue.use(Router)
 
 export default new Router({
@@ -17,7 +16,6 @@ export default new Router({
     { path: '/people', name: 'people', component: People},
     { path: '/species', name: 'species', component: Species},
     { path: '/starships', name: 'starships', component: StarShips},
-    { path: '/vehicles', name: 'vehicles', component: Vehicles},
-   
+    { path: '/vehicles', name: 'vehicles', component: Vehicles},  
   ]
 })

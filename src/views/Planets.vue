@@ -1,6 +1,5 @@
 <template>
-    <div>
-            
+    <div>    
     <h2 class="header-h2"> Below are a list of Planets with some information about them </h2>
 
     <modal v-if="showModal" :title="planet" @close="showModal = false">
@@ -8,8 +7,6 @@
         <b>Name: </b>{{planet.name}}
       </div>
     </modal>
-
-    
 
     <div class="container-fluid">
       <div class="columns"> 
@@ -23,7 +20,8 @@
         <p><b>Diameter of Planet: </b>{{planet.diameter}}</p>
         <p><b>Usual Climate:</b> {{planet.climate}}</p>
         <p><b>Created on: </b>{{planet.created}}</p>
-      <button class="button is-black" @click="showModal = true">Info</button> 
+        <button class="button is-black" @click="showModal = true"> Planets Info</button>
+      <!--<button class="button is-black" @click="showModal = true">Info</button> -->
         </div>
         </div>
       </div>
