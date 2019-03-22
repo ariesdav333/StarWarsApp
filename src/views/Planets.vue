@@ -20,7 +20,9 @@
         <p><b>Diameter of Planet: </b>{{planet.diameter}}</p>
         <p><b>Usual Climate:</b> {{planet.climate}}</p>
         <p><b>Created on: </b>{{planet.created}}</p>
-        <button class="button is-black" @click="showModal = true"> Planets Info</button>
+        <v-button :onClick="consoleClick">Planet Info</v-button>
+   
+        
       <!--<button class="button is-black" @click="showModal = true">Info</button> -->
         </div>
         </div>
@@ -32,11 +34,16 @@
 
 <script>
 import Modal from '@/components/Modal'
+import Button from '@/components/Button'
+
+
+
 
 export default {
 
     components: {
-        Modal,
+        Modal,  
+        'v-button':Button,  
     },
     data() {
         return{
@@ -46,7 +53,11 @@ export default {
     },
     
     methods: {
-        loadPlanets() {
+        consoleClick() {
+            console.log('Button Clicked')
+        },
+
+    loadPlanets() {
       this.planets = [];
       let url = "planets";
       this.$http.get(url).then(response => {
@@ -59,6 +70,7 @@ export default {
         this.loadPlanets();
     }
 }
+
 </script>
 
 <style>
@@ -66,5 +78,4 @@ export default {
   padding: 20px;
   margin: 10px;
 }
-
 </style>

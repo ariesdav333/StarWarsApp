@@ -1,12 +1,20 @@
 <template>
     <div>
-        <button class="button is-black" @click="showModal = true">Info</button>
+        <button @click="onClick" class="button is-black">
+            <slot>Button</slot>
+        </button>
     </div>
 </template>
 
 <script>
 export default {
-   name: Button, 
+    props: {
+        onClick: {
+            type: Function,
+            required: true
+        }
+    }
+ 
 }
 </script>
 

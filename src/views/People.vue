@@ -3,7 +3,7 @@
    
     <h1><b>People Page</b></h1>
 
-    <modal v-if="showModal" @close="showModal = false"></modal>
+    <modal v-if="showModal" :title="People" @close="showModal = false"></modal>
         <div class="container-fluid">
             <div class="columns">
                 <div v-for="(people, index) in peoples" :key="index"> 
