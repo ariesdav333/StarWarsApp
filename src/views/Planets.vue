@@ -1,6 +1,22 @@
 <template>
     <div>    
     <h2 class="header-h2"> Below are a list of Planets with some information about them </h2>
+<!-- Test Profile Page -->
+    <div class="profile-page">
+        <div class="avatar">
+           <p>{{user.name}}</p> 
+            {{user.emailAddress}}
+        </div>
+    </div>
+
+    <contact-info
+    :email-address="emailAddress"
+    :twitter-handle="twitterHandle"
+    :instagram="instagram"
+    />
+
+    <!-- Test Profile Page -->
+ 
 
     <modal v-if="showModal" :title="planet" @close="showModal = false">
        <div v-for="(planet, index) in planets" :key="index">
@@ -20,10 +36,9 @@
         <p><b>Diameter of Planet: </b>{{planet.diameter}}</p>
         <p><b>Usual Climate:</b> {{planet.climate}}</p>
         <p><b>Created on: </b>{{planet.created}}</p>
-        <v-button :onClick="consoleClick">Planet Info</v-button>
+        <v-button>Planet Info</v-button>
    
-        
-      <!--<button class="button is-black" @click="showModal = true">Info</button> -->
+         <!--<button class="button is-black" @click="showModal = true">Info</button> -->
         </div>
         </div>
       </div>
@@ -35,13 +50,12 @@
 <script>
 import Modal from '@/components/Modal'
 import Button from '@/components/Button'
-
-
+import ContactInfo from '@/components/ContactInfo'
 
 
 export default {
-
     components: {
+        ContactInfo,
         Modal,  
         'v-button':Button,  
     },
@@ -49,18 +63,25 @@ export default {
         return{
             planets: [],
             showModal: false,
+            post: null,
+
+            //  Profile Page Data
+            user: {
+                name: 'David Williams',
+                emailAddress: 'davidwilliams@gmail.com',
+                twitterHandle: 'davaries333',
+                instagram: 'davariesdread',
+            },
+
+            // Profle Page Data
+
         }
     },
-    
     methods: {
-        consoleClick() {
-            console.log('Button Clicked')
-        },
-
-    loadPlanets() {
-      this.planets = [];
-      let url = "planets";
-      this.$http.get(url).then(response => {
+        loadPlanets() {
+        this.planets = [];
+        let url = "planets";
+        this.$http.get(url).then(response => {
         this.planets = response.data.results;
       });
     }, 
@@ -70,7 +91,6 @@ export default {
         this.loadPlanets();
     }
 }
-
 </script>
 
 <style>

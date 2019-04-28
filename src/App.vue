@@ -19,6 +19,7 @@
        <router-link to="/Species" class="nav-item r-item">Species</router-link>
         <router-link to="/Starships" class="nav-item r-item">StarShips</router-link>
          <router-link to="/Vehicles" class="nav-item r-item">Vehicles</router-link>
+         <router-link to="/Contact" class="nav-item r-item">Contact</router-link>
       <div class="nav-item"> 
         <p class="control">
         </p>

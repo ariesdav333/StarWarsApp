@@ -9,12 +9,8 @@
 <script>
 export default {
     props: {
-        onClick: {
-            type: Function,
-            required: true
-        }
+       
     }
- 
 }
 </script>
 
